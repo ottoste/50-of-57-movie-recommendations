@@ -12,7 +12,7 @@ defmodule MovieRequestTest do
   	url = "http://www.omdbapi.com/?t=martian"
 
   	result = MovieRequest.get_response(url)
-  	assert String.contains?(result, " ")
+  	assert String.contains?(result, "The Martian")
   end
 
   test "Parses the data to map" do 

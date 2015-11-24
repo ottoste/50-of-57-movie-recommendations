@@ -13,13 +13,14 @@ defmodule MovieRequest do
 	def get_response(url) do
  		url
     |> HTTPotion.get
-    |> get_response_body
+    |> get_response_items
     
   end
     
-  def get_response_body(response) do
+  def get_response_items(response) do
   	%HTTPotion.Response{body: body} = response
     body
+    
   end
 
 	def parse_data(json) do
